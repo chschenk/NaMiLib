@@ -248,9 +248,11 @@ namespace NaMiLib
             if (!isAuthenticated)
                 throw new NaMiNotLoggedInException();
             RestRequest req = new RestRequest(Commands.Filter, Method.GET);
+            req.AddParameter("filterString", f.Command);
+            req.AddParameter("searchString", AdditionalText);
             req.AddUrlSegment("GID", GruppierungsID.ToString());
-            req.AddUrlSegment("FILTER", f.Command);
-            req.AddUrlSegment("SEARCH", AdditionalText);
+            //req.AddUrlSegment("FILTER", f.Command);
+            //req.AddUrlSegment("SEARCH", AdditionalText);
             var resp = client.Execute<NaMiResponse<List<NaMiObjekt>>>(req);
             if (!resp.Data.success)
                 throw new NaMiException<List<NaMiObjekt>>(resp.Data);

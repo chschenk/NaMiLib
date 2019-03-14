@@ -17,7 +17,8 @@ namespace NaMiLib
         public const string Mitglieder = "ica/rest/nami/mitglied/filtered-for-navigation/gruppierung/gruppierung/{GID}/flist";
         public const string SearchMeta = "ica/rest/nami/search-multi/meta-for-search-entity";
         public const string Search = "ica/rest/nami/search-multi/result-list?searchedValues={VALUES}&start=0&limit=5000";
-        public const string Filter = "ica/rest/nami/mitglied/filtered-for-navigation/gruppierung/gruppierung/{GID}/?filterString={FILTER}&searchString={SEARCH}&page=1&start=0&limit=5000";
+        public const string Filter = "ica/rest/nami/mitglied/filtered-for-navigation/gruppierung/gruppierung/{GID}/";
+        //public const string Filter = "ica/rest/nami/mitglied/filtered-for-navigation/gruppierung/gruppierung/{GID}/?filterString={FILTER}&searchString={SEARCH}&page=1&start=0&limit=5000";
         public const string Logout = "ica/rest/nami/auth/logout";
         public const string Taetigkeiten = "ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/{MID}/";
         public const string Taetigkeit = "ica/rest/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/{MID}/{TID}";
